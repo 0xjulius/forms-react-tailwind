@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import React from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -11,15 +12,15 @@ function App() {
   };
 
   return (
-    <div className="container fixed inset-0 flex items-center justify-center p-4 overflow-auto">
+    <div className="fixed inset-0 flex items-center justify-center overflow-auto">
       <div className="w-full max-w-4xl bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-        {/* Left panel (Welcome message) */}
+        {/* vasen paneeli */}
         <div className="relative w-full md:w-1/2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-8 flex flex-col justify-between overflow-hidden">
-          {/* Background image */}
+          {/* taustakuva */}
           <img
             src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Office workspace"
-            className="absolute inset-0 w-full h-full object-cover opacity-80"
+            className="absolute inset-0 w-full h-full object-cover opacity-70"
           />
 
           <div className="relative z-10">
@@ -38,12 +39,12 @@ function App() {
 
         {/* Right panel (Form) */}
         <div className="w-full md:w-1/2 p-8 md:p-10">
-          <h3 className="text-2xl font-bold text-gray-800 pb-6">
+          <h3 className="text-2xl font-bold text-gray-800 pb-6 ">
             Kirjaudu sisään
           </h3>
 
           <div class="flex space-x-3">
-            <button class="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2.5 hover:bg-gray-50 transition-colors">
+            <button className="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2.5 hover:bg-gray-50 transition-colors cursor-pointer">
               <svg
                 class="w-5 h-5"
                 viewBox="0 0 24 24"
@@ -58,9 +59,9 @@ function App() {
                   fill="#4285F4"
                 />
               </svg>
-              <span class="text-sm font-medium text-gray-700">Google</span>
+              <span className="text-sm font-medium text-gray-700">Google</span>
             </button>
-            <button class="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2.5 hover:bg-gray-50 transition-colors">
+            <button class="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2.5 hover:bg-gray-50 transition-colors cursor-pointer">
               <svg
                 class="w-5 h-5 text-[#1877F2]"
                 viewBox="0 0 24 24"
@@ -81,20 +82,30 @@ function App() {
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
 
-          <form className="form space-y-4" onSubmit={handleSubmit} noValidate>
+          <form
+            className="form space-y-1 py-6"
+            onSubmit={handleSubmit}
+            noValidate
+          >
             <div class="flex items-center justify-between mb-1">
               <label
-                for="password"
+                for="email"
                 class="block text-sm font-medium text-gray-700"
               >
                 Sähköpostiosoite
               </label>
             </div>
-            <input
-              type="email"
-              placeholder="sinun.nimesi@esimerkki.fi"
-              className="w-full p-3 rounded-md border border-gray-300"
-            />
+
+            <div className="relative">
+              <span className="absolute inset-y-0 left-0 flex items-center pl-6 pb-6 text-blue-400">
+                <i className="fas fa-envelope text-xl"></i>
+              </span>
+              <input
+                type="email"
+                placeholder="sinun.nimesi@esimerkki.fi"
+                className="w-full pl-10 p-3 rounded-md border border-gray-300"
+              />
+            </div>
 
             <div class="flex items-center justify-between mb-1">
               <label
@@ -104,13 +115,19 @@ function App() {
                 Salasana
               </label>
             </div>
-            <input
-              type="password"
-              placeholder="••••••••"
-              className="w-full p-3 rounded-md border border-gray-300"
-            />
+            <div className="relative">
+              <span className="absolute inset-y-0 left-0 flex items-center pl-6 pb-6 text-blue-400">
+                <i className="fas fa-lock text-xl"></i>{" "}
+                {/* You can use fa-2x instead */}
+              </span>
+              <input
+                type="password"
+                placeholder="••••••••"
+                className="w-full pl-12 p-3 rounded-md border border-gray-300"
+              />
+            </div>
 
-            <div className="flex items-center">
+            <div className="flex items-center ">
               <input
                 id="remember-me"
                 type="checkbox"
@@ -130,15 +147,14 @@ function App() {
               </p>
             )}
 
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-            >
-              Kirjaudu sisään
+            <button className="relative w-full inline-flex items-center justify-center overflow-hidden text-sm font-semibold text-white rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 transition-all duration-300 ease-in-out hover:shadow-lg focus:ring-4 focus:ring-purple-300 cursor-pointer group opacity-80">
+              <span className="relative z-10 px-6 py-3.5 bg-opacity-0 group-hover:bg-opacity-10 transition duration-300 ease-in-out">
+                Kirjaudu sisään
+              </span>
             </button>
           </form>
 
-          <p className="text-center text-sm text-gray-600 mt-6">
+          <p className="text-center text-sm text-gray-600 mt-8">
             Eikö sinulla ole vielä tunnuksia?{" "}
             <a
               href="#"

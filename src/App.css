@@ -12,17 +12,9 @@ html, body, #root {
   justify-content: center; /* horizontal centering */
   align-items: center;     /* vertical centering */
   background-color: #f3f4f6; /* optional: light gray Tailwind-style bg */
-  padding-left: 2rem;   /* equals roughly px-8 in Tailwind */
-  padding-right: 2rem;
   box-sizing: border-box;
 }
 
-.container {
-  margin: 0 auto;
-  border: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-}
 
 .form input[type="text"] {
   width: 100%;
