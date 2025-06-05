@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center overflow-auto">
-      <div className="w-full max-w-4xl bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+      <div className="w-full max-w-4xl bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row border-1 border-solid border-gray-200">
         {/* vasen paneeli */}
         <div className="relative w-full md:w-1/2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-8 flex flex-col justify-between overflow-hidden">
           {/* taustakuva */}

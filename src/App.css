@@ -11,7 +11,7 @@ html, body, #root {
   display: flex;
   justify-content: center; /* horizontal centering */
   align-items: center;     /* vertical centering */
-  background-color: #f3f4f6; /* optional: light gray Tailwind-style bg */
+  background-image: linear-gradient(to right, #ffffff, #f8f7ff, #eff0ff, #e4e9ff, #d8e3ff, #cbe3ff, #bce3ff, #ace3ff, #97e9ff, #81f0ff, #6cf6fc, #5ffbf1); /* optional: light gray Tailwind-style bg */
   box-sizing: border-box;
 }
 
