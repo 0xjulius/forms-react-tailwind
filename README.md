@@ -1,4 +1,4 @@
-# login screen, react app | https://forms-0xjulius.vercel.app/
+# login screen, react app (front end only) | https://forms-0xjulius.vercel.app/
 simple photo + form (login screen). 
 
 form inspired from my light-a-candle thesis from here: https://github.com/0xjulius/light-a-candle-wp. 
