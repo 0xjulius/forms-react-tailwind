@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+#root {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+  background-color: #f3f4f6; /* optional: light gray Tailwind-style bg */
+  padding-left: 2rem;   /* equals roughly px-8 in Tailwind */
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  border: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.form input[type="text"] {
+  width: 100%;
+  margin-bottom: 25px;
+  background: #e6e6e6;
+  color: #666;
+  border-radius: 20px;
+  padding: 0 30px 0 68px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  height: 50px;
+}
+
+.form textarea {
+  height: 150px;
+  width: 100%;
+  background: #e6e6e6;
+  color: #666;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 10px 20px 0;
+  margin-bottom: 25px;
+  resize: none;
+}
+
+.form input[type="email"] {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #e6e6e6;
+  color: #666;
+  border-radius: 20px;
+  padding: 0 30px 0 68px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  height: 50px;
+  margin-bottom: 25px;
+}
+
+.form input[type="number"] {
+  width: 100%;
+  margin-bottom: 25px; /* combined the two margin-bottom */
+  background: #e6e6e6;
+  color: #666;
+  border-radius: 20px;
+  padding: 0 30px 0 68px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  height: 50px;
+}
